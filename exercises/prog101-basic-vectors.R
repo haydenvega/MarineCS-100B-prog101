@@ -9,6 +9,26 @@ max(x)
 # capitalized.
 # Use slice indexing to pull out the first 10 letters of the alphabet.
 
+length(LETTERS)
+
+LETTERS[1:10]
+
 # Use non-contiguous indexing to pull out the 5th, 10th, and 15th letters.
 
-# Convert the last ten letters of the alphabet to lower case.
+LETTERS[c(5, 10, 15)]
+
+# Convert the last ten letters of the alphabet to lower case
+
+x<-LETTERS
+
+lowercasefull <- tolower(x)
+
+lowercasesome <- lowercasefull[17:26]
+
+letterpartial <- LETTERS[1:16]
+
+answer <- c(letterpartial, lowercasesome)
+
+answer
+
+LETTERS
