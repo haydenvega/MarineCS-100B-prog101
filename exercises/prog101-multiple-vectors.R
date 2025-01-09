@@ -8,10 +8,16 @@ instrument_deployed <- instrument_deployed_h + instrument_deployed_hdec
 # Based on the code above, calculate the duration of instrument deployments
 # using the instrument recovery times below. What units do the durations have?
 instrument_recovered_hm <- c(1600, 1920, 2015)
-???
-instrument_recovered <- ??? + ???
 
-instrument_durations <- ??? - ???
+instrument_recovered <- instrument_deployed + instrument_deployed_hm
+
+instrument_durations <- instrument_recovered_hm - instrument_recovered
 
 # Which site had the longest duration? Use conditional indexing.
 site <- c("Santa Cruz", "Santa Rosa", "San Miguel")
+
+site_duration <- c(site, instrument_durations)
+
+site[max(instrument_durations)]
+
+site[instrument_durations == 995.6]
